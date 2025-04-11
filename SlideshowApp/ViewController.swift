@@ -37,7 +37,9 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        self.slideShowButton(slideShowButton!)
+        if timer != nil {
+            self.slideShowButton(slideShowButton!)
+        }
         
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         
